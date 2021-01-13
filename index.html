@@ -23,18 +23,25 @@
 
             <div>Rock, Paper or Scissors?</div>
 
-            <div>The rules: Choose an option below and try to beat the computer!</div>
-
+            <div>Choose an option below and try to beat the computer! The rules:</div>
+            <br>
+            <ul>
+                <li>Paper beats Rock</li>
+                <li>Rock beats Scissors</li>
+                <li>Scissors beats Paper</li>
+            </ul>
+            <br>
             <label>Rock<input type="radio" name="game" value="rock"></label>
             <label>Paper<input type="radio" name="game" value="paper"></label>
             <label>Scissors<input type="radio" name="game" value="scissors"></label>
-
+            <br>
             <button id="throw-button">Throw!</button>
-
-            <div>Computer got<span id="computer-throw"></span>, <span id="game-result"></span></div>
+            <br>
+            <div><span id="game-result"></span></div>
 
             <div>Wins: <span id="wins"></span></div>
             <div>Losses: <span id="losses"></span></div>
+            <div>Draws: <span id="draws"></span></div>
             <div>Total: <span id="total"></span></div>
 
         </section>
