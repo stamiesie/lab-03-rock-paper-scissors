@@ -3,6 +3,7 @@
 import { getRandomThrow, didUserWin } from './utils.js';
 
 const throwButton = document.getElementById('throw-button');
+const resetButton = document.getElementById('reset-button');
 const userWins = document.getElementById('wins');
 const userLoses = document.getElementById('losses');
 const userDraws = document.getElementById('draws');
@@ -34,15 +35,22 @@ throwButton.addEventListener('click', () => {
         wins++;
         gameResult.textContent = `${userThrow} beats ${computerThrow}.  You win!`;
     } else if (didUserWin(userThrow, computerThrow) === 'draw') {
-        draw++;
+        draws++;
         gameResult.textContent = `You have ${userThrow}. Computer has ${computerThrow}.  Draw!`;
     } else if (didUserWin(userThrow, computerThrow) === 'lose') {
         losses++;
-        gameResult.textContent = `${computerThrow} beats ${userThrow}. You lose!`;
+        gameResult.textContent = `Computer's ${computerThrow} beats your ${userThrow}. You lose!`;
     }
 
     userWins.textContent = wins;
     userLoses.textContent = losses;
     userDraws.textContent = draws;
     totalPlays.textContent = total;
-})
+});
+
+resetButton.addEventListener('click', () => {
+    userWins.textContent = '0';
+    userLoses.textContent = '0';
+    userDraws.textContent = '0';
+    gameResult.textContent = '';
+});
