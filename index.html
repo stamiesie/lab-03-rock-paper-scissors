@@ -14,14 +14,12 @@
 
 <body>
     <header>
-        <div class="gutter-right logo">
-            <img src="assets/big-logo.png" />
+        <div>
+            <h1>Rock, Paper or Scissors?</h1>
         </div>
     </header>
     <main>
         <section class="main-section">
-
-            <div>Rock, Paper or Scissors?</div>
 
             <div>Choose an option below and try to beat the computer! The rules are:</div>
 
@@ -31,9 +29,18 @@
                 <li>Scissors beats Paper</li>
             </ul>
             <br>
-            <label>Rock<input type="radio" name="game" value="rock"></label>
-            <label>Paper<input type="radio" name="game" value="paper"></label>
-            <label>Scissors<input type="radio" name="game" value="scissors"></label>
+            <label>
+                <input type="radio" name="game" value="rock">
+                <img src="assets/rock.png" alt="rock">
+            </label>
+            <label>
+                <input type="radio" name="game" value="paper">
+                <img src="assets/paper.png" alt="paper">
+            </label>
+            <label>
+                <input type="radio" name="game" value="scissors">
+                <img src="assets/scissors.png" alt="scissors">
+            </label>
             <br>
             <button id="throw-button">Throw!</button>
             <br>
@@ -48,9 +55,7 @@
 
         </section>
     </main>
-    <footer>
-        <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
-    </footer>
+
 
     <script type="module" src="app.js"></script>
 </body>
