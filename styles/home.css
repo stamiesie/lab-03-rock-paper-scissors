@@ -20,12 +20,17 @@ img {
 }
 
 label > img {
-    width: 100px;
-    height:100px;
+    width: 200px;
+    height:200px;
 }
 
 input {
     display: none;
+    }
+
+input + img {
+    border: 2px solid rgb(55, 55, 55);
+    margin: 5px;
 }
 
 input:checked + img {
