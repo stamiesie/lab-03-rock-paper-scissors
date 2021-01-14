@@ -26,7 +26,7 @@ label > img {
 
 input {
     display: none;
-    }
+}
 
 input + img {
     border: 2px solid rgb(55, 55, 55);

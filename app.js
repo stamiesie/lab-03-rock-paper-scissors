@@ -58,7 +58,6 @@ resetButton.addEventListener('click', () => {
     userLoses.textContent = '0';
     userDraws.textContent = '0';
     gameResult.textContent = '';
-
     gameResets.textContent = resets;
 
 });

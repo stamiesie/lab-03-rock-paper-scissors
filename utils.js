@@ -1,5 +1,4 @@
 export function getRandomThrow(number) {
-
     if (number === 0) {
         return 'rock';
     } else if (number === 1) {
@@ -10,11 +9,7 @@ export function getRandomThrow(number) {
 }
 
 export function didUserWin(player, computer) {
-    if (player === 'rock' && computer === 'rock') {
-        return 'draw';
-    } else if (player === 'paper' && computer === 'paper') {
-        return 'draw';
-    } else if (player === 'scissors' && computer === 'scissors') {
+    if (player === computer) {
         return 'draw';
     } else if (player === 'paper' && computer === 'rock') {
         return 'win';
