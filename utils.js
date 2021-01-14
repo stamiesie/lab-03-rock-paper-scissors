@@ -25,3 +25,7 @@ export function didUserWin(player, computer) {
         return 'lose';
     }
 }
+
+export function setsScoreboard(domElement, data) {
+    domElement.textContent = data;
+}

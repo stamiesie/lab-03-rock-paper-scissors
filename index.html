@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="styles/home.css">
     <title>Document</title>
 </head>
-
 <body>
     <header>
         <div>
@@ -29,9 +28,9 @@
                 <li>Scissors beats Paper</li>
             </ul>
             <br>
-            <div>
+            <div class="label-container">
                 <label>
-                    <input type="radio" name="game" value="rock">
+                    <input type="radio" name="game" value="rock" checked>
                     <img src="assets/rock.png" alt="rock">
                 </label>
                 <label>
@@ -43,23 +42,20 @@
                     <img src="assets/scissors.png" alt="scissors">
                 </label>
             </div>
-            <br>
-            <button id="throw-button">Throw!</button>
-            <br>
-            <button id="reset-button">Reset Score</button>
-            <br>
-            <div><span id="game-result"></span></div>
-
-            <div>Wins: <span id="wins">0</span></div>
-            <div>Losses: <span id="losses">0</span></div>
-            <div>Draws: <span id="draws">0</span></div>
-            <div>Games Played: <span id="total">0</span></div>
-            <div>Resets: <span id="resets">0</span></div>
-
+            <div class="button-container">
+                <button id="throw-button">Throw!</button>
+                <button id="reset-button">Reset Score</button>
+            </div>
+            <section class="scoreboard">
+                <div class="score"><span id="game-result"></span></div>
+                <div class="score">Wins: <span id="wins">0</span></div>
+                <div class="score">Losses: <span id="losses">0</span></div>
+                <div class="score">Draws: <span id="draws">0</span></div>
+                <div class="score">Games Played: <span id="total">0</span></div>
+                <div class="score">Resets: <span id="resets">0</span></div>
+            </section>
         </section>
     </main>
-
-
     <script type="module" src="app.js"></script>
 </body>
 
