@@ -1,4 +1,4 @@
-import { getRandomThrow, didUserWin } from './utils.js';
+import { getRandomThrow, didUserWin, setsScoreboard } from './utils.js';
 
 const throwButton = document.getElementById('throw-button');
 const resetButton = document.getElementById('reset-button');
@@ -21,14 +21,10 @@ let resets = 0;
 
 throwButton.addEventListener('click', () => {
     total++;
+
     const randomNumber = Math.round(Math.random() * 2);
-
-    getRandomThrow(randomNumber);
-
     const computerThrow = getRandomThrow(randomNumber);
-
     const selectedButton = document.querySelector('input[type="radio"]:checked');
-
     const userThrow = selectedButton.value;
 
     if (didUserWin(userThrow, computerThrow) === 'win') {
@@ -40,24 +36,24 @@ throwButton.addEventListener('click', () => {
     } else if (didUserWin(userThrow, computerThrow) === 'lose') {
         losses++;
         gameResult.textContent = `Computer's ${computerThrow} beats your ${userThrow}. You lose!`;
-    }
+    }    
 
-    userWins.textContent = wins;
-    userLoses.textContent = losses;
-    userDraws.textContent = draws;
-    totalPlays.textContent = total;
+    setsScoreboard(userWins, wins);
+    setsScoreboard(userLoses, losses);
+    setsScoreboard(userDraws, draws);
+    setsScoreboard(totalPlays, total);
+
 });
-
 resetButton.addEventListener('click', () => {
     resets++;
     wins = 0;
     losses = 0;
     draws = 0;
 
-    userWins.textContent = '0';
-    userLoses.textContent = '0';
-    userDraws.textContent = '0';
-    gameResult.textContent = '';
-    gameResets.textContent = resets;
-
+    setsScoreboard(userWins, '0');
+    setsScoreboard(userLoses, '0');
+    setsScoreboard(userDraws, '0');
+    setsScoreboard(gameResult, '');
+    setsScoreboard(gameResets, resets);
+    
 });
